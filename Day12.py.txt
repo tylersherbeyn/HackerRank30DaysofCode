@@ -1,0 +1,15 @@
+class Grade(Student):
+    def __init__(self, firstName, lastName, phone, score):
+        Student.__init__(self,firstName, lastName, phone)
+        self.score = score
+    def calculate(self):
+        if score in range(0,40):
+            return "D"
+        elif score in range(39,60):
+            return "B"
+        elif score in range(59,75):
+            return "A"
+        elif score in range(74,90):
+            return "E"
+        elif score in range(89,101):
+            return "O"

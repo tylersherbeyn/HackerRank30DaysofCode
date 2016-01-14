@@ -1,0 +1,11 @@
+#!/bin/python
+n = int(raw_input().strip())
+if (n % 2 == 0): #even
+    if n in range(1,6):
+        print "Not Weird"
+    elif n in range(5,21):
+        print "Weird"
+    else:
+        print "Not Weird"
+else: #odd
+    print "Weird"
