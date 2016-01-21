@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n, input = int(raw_input()), map(int,raw_input().strip().split(' '))
+input.sort()
+m=input[-1]-input[0]
+li = []
+
+for i in range(1,len(input)):
+    if m==input[i]-input[i-1]:
+        li.extend([str(input[i-1]), str(input[i])])
+    elif m > input[i]-input[i-1]:
+        m=input[i]-input[i-1]
+        li=[]
+        li.extend([str(input[i-1]),str(input[i])])
+print ' '.join(li)

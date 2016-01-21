@@ -1,0 +1,5 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+words = re.sub("[^a-zA-Z\d\s:]", " ", raw_input(), 0, 0).split()
+print len(words)
+for word in words: print word

@@ -1,0 +1,11 @@
+    def insert(self,head,sata): 
+        if head==None:
+            head=Node(self)
+            head.data=sata
+        else:
+            start=head
+            while start.next :start=start.next
+            start.next=Node(self)
+            start=start.next
+            start.data=sata
+        return head
