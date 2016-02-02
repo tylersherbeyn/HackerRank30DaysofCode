@@ -1,0 +1,15 @@
+from datetime import date # Enter your code here. Read input from STDIN. Print output to STDOUT
+date1 = map(int,raw_input().strip().split(' '))
+date2 = map(int,raw_input().strip().split(' '))        
+d1 = date(date1[2], date1[1], date1[0])
+d2 = date(date2[2], date2[1], date2[0])
+delta = d1 - d2
+
+if int(delta.days) <= 0:
+    print 0
+elif d1.month == d2.month:
+    print int(delta.days) * 15
+elif int(delta.days) >= 365:
+    print 10000
+elif int(delta.days) < 365:
+    print (int(d1.month)-int(d2.month)) * 500

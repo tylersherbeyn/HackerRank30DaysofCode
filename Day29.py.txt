@@ -1,0 +1,11 @@
+for _ in range(0,int(raw_input())):
+    s = raw_input().strip(' ')
+    r = s[::-1]
+    flag = False
+    for i in range(0,len(s)-1):
+        if abs(ord(s[i])- ord(s[i-1])) != abs(ord(r[i-1])-ord(r[i])):      
+            flag = True
+            print "Not Funny"
+            break
+    if not flag:
+        print "Funny"
